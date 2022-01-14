@@ -1,3 +1,5 @@
+//---------------------------------------------------------------------------SAMPLE DATA
+
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
 const valid2 = [5, 5, 3, 5, 7, 6, 6, 7, 6, 8, 7, 5, 1, 4, 3, 9]
@@ -22,6 +24,10 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
+
+//---------------------------------------------------------------------------FUNCTIONS
+
+
 function validateCred(array){
   let arrayCopy = array.slice();
   let checker = arrayCopy.pop();
@@ -45,4 +51,38 @@ function validateCred(array){
 
   const passed = (sum % 10 === 0);
   return (passed ? true : false);
+}
+
+function findInvalidCards(cardarray){
+  const invalid = [];
+  cardarray.forEach(card => {
+    let valid = validateCred(card);
+    if(!valid){
+      invalid.push(card);
+    }
+  })
+  return invalid;
+}
+
+function idInvalidCardCompanies(invalidCardArray){
+
+  let acceptedCompanies = {
+    3: 'Amex',
+    4: 'Visa',
+    5: 'Mastercard',
+    6: 'Discover'
+  }
+
+  let companies = new Set();
+
+  invalidCardArray.forEach(card => {
+    if (acceptedCompanies[card[0]]){
+      companies.add(acceptedCompanies[card[0]]);
+    }else{
+      console.log(`company not found for ${card}`)
+    }
+  });
+
+  let companiesArray = Array.from(companies);
+  return companiesArray;
 }
