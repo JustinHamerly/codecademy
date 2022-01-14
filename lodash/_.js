@@ -60,6 +60,18 @@ const _ = {
       }
     }
     return undefined;
+  },
+
+  drop(array, number){
+    let newArray = [];
+    if (!number){
+      newArray = array.slice(1);
+    }else if(typeof number === 'number'){
+      newArray = array.slice(number);
+    }else{
+      throw new Error(`${number} is not a valid number`);
+    }
+    return newArray;
   }
 
 };
