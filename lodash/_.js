@@ -72,6 +72,15 @@ const _ = {
       throw new Error(`${number} is not a valid number`);
     }
     return newArray;
+  },
+
+  dropWhile(array, predicate){
+    const cb = (element, index) => {
+      return !predicate(element, index, array);
+    };
+    let dropNumber = array.findIndex(cb);
+    let droppedArray = this.drop(array, dropNumber);
+    return droppedArray;
   }
 
 };
