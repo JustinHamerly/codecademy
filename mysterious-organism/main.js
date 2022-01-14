@@ -65,7 +65,7 @@ function pAequorFactory(specimenNum, dna){
   }
 }
 
-let specimenGroup = [];
+const specimenGroup = [];
 let number = 0
 
 while (specimenGroup.length < 30){
