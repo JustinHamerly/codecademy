@@ -46,5 +46,23 @@ function pAequorFactory(specimenNum, dna){
 
     },
 
+    willLikelySurvive(){
+      let cgCount = 0;
+
+      for (let base of this.dna){
+        if(base === 'C' || base === 'G'){
+          cgCount++;
+        }
+      }
+
+      if((cgCount/this.dna.length) >= .6){
+        return true;
+      }
+      
+      return false;
+    }
+
   }
 }
+
+
