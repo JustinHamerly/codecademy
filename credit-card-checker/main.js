@@ -46,3 +46,16 @@ function validateCred(array){
   const passed = (sum % 10 === 0);
   return (passed ? true : false);
 }
+
+function findInvalidCards(cardarray){
+  const invalid = [];
+  cardarray.forEach(card => {
+    let valid = validateCred(card);
+    if(!valid){
+      invalid.push(card);
+    }
+  })
+  return invalid;
+}
+
+console.log(findInvalidCards(batch));
