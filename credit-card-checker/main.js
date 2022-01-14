@@ -58,4 +58,25 @@ function findInvalidCards(cardarray){
   return invalid;
 }
 
-console.log(findInvalidCards(batch));
+function idInvalidCardCompanies(invalidCardArray){
+
+  let acceptedCompanies = {
+    3: 'Amex',
+    4: 'Visa',
+    5: 'Mastercard',
+    6: 'Discover'
+  }
+
+  let companies = new Set();
+
+  invalidCardArray.forEach(card => {
+    if (acceptedCompanies[card[0]]){
+      companies.add(acceptedCompanies[card[0]]);
+    }else{
+      console.log(`company not found for ${card}`)
+    }
+  });
+
+  let companiesArray = Array.from(companies);
+  return companiesArray;
+}
