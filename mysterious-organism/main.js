@@ -28,5 +28,23 @@ function pAequorFactory(specimenNum, dna){
       this.dna[dnaPos] = newBase;
     },
 
+    compareDNA(pAequor){
+      const ex1 = this.dna;
+      const ex2 = pAequor.dna;
+
+      let matching = 0;
+
+      for(let i=0; i < ex1.length; i++){
+        if(ex1[i] === ex2[i]){
+          matching++;
+        }
+      }
+
+      let percent = Math.round(matching/ex1.length * 100);
+
+      console.log(`Specimen #${this.specimenNum} and Specimen #${pAequor.specimenNum} have ${percent}% DNA in common`);
+
+    },
+
   }
 }
