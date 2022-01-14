@@ -22,13 +22,27 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
+function validateCred(array){
+  let arrayCopy = array.slice();
+  let checker = arrayCopy.pop();
+  arrayCopy.reverse();
 
-// Add your functions below:
+  for (let i=0; i<arrayCopy.length; i++){
+    if(i%2 === 0 || i === 0){
+      let number = arrayCopy[i]*2;
+      while (number > 9){
+        number -= 9
+      }
+      arrayCopy[i] = number;
+    }
+  }
 
+  let sum = 0;
+  for (let number of arrayCopy){
+    sum += number;
+  }
+  sum += checker;
 
-
-
-
-
-
-
+  const passed = (sum % 10 === 0);
+  return (passed ? true : false);
+}
