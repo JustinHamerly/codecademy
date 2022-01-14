@@ -81,6 +81,18 @@ const _ = {
     let dropNumber = array.findIndex(cb);
     let droppedArray = this.drop(array, dropNumber);
     return droppedArray;
+  },
+
+  chunk(array, size){
+    const newArray = [];
+    if(!size){
+      size = 1;
+    }
+    for(let i=0; i<array.length; i += size){
+      let chunk = array.slice(i, i+size);
+      newArray.push(chunk);
+    }
+    return newArray;
   }
 
 };
