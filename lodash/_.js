@@ -42,6 +42,15 @@ const _ = {
       return true;
     }
     return false;
+  },
+
+  invert(object){
+    const invertedObject = {};
+    for (let property in object){
+      let originalValue = object[property];
+      invertedObject[originalValue] = property;
+    }
+    return invertedObject;
   }
 
 };
