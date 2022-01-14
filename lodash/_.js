@@ -37,8 +37,11 @@ const _ = {
     return paddedString;
   },
 
-  has(){
-
+  has(object, key){
+    if (object[key]){
+      return true;
+    }
+    return false;
   }
 
 };
