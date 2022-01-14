@@ -65,4 +65,13 @@ function pAequorFactory(specimenNum, dna){
   }
 }
 
+let specimenGroup = [];
+let number = 0
 
+while (specimenGroup.length < 30){
+  number++;
+  let specimen = pAequorFactory(number, mockUpStrand());
+  if(specimen.willLikelySurvive()){
+    specimenGroup.push(specimen);
+  }
+}
