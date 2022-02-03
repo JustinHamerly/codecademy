@@ -1,0 +1,179 @@
+/* ----------GLOBAL STYLING */
+
+* {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0;
+}
+
+/* ----------Text Styling */
+
+h1{
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+}
+
+a{
+  text-decoration: underline;
+}
+
+h2{
+  font-size: 1.8rem;
+}
+
+h3{
+  font-size: 1.2rem;
+}
+
+h4{
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+h5{
+  font-size: .9rem;
+}
+
+/* ----------HEADER */
+
+header {
+  position: fixed;
+  height: 69px;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  z-index: 1;
+  opacity: 100;
+}
+
+nav {
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ----------MAIN */
+
+main {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main section{
+  margin: 0 auto;
+}
+
+/* ----------MISSION SECTION */
+
+#mission {
+  height: 700px;
+  width: 1200px;
+  background-image: url("./img/img-mission-background.jpg");
+  display: flex;
+  align-items: center;
+}
+
+#mission-text {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ----------FEATURED SECTION */
+
+#featured {
+  width: 1000px;
+  height:700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#featured img {
+  height: 200px;
+  width: 300px;
+}
+
+#featured h4 {
+  margin-top: 10px;
+}
+
+#featured-card-block {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-card {
+  margin: 15px;
+}
+
+/* ----------LOCATION SECTION */
+
+#locations {
+  height: 600px;
+  width: 1200px;
+  background: url("./img/img-locations-background.jpg") no-repeat 50% 15%;
+  background-size: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#locations h2 {
+  background-color: transparent;
+  padding-bottom: 15px;
+}
+
+#loc-cards {
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  align-content: center;
+  width: 1020px;
+  padding-bottom: 60px;
+}
+
+.location-card{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: black;
+}
+
+/* ----------CONTACT BLOCK */
+
+#contact {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ----------FOOTER */
+
+footer p{
+  margin: 20px;
+  text-align: left;
+}
