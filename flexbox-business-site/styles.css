@@ -1,0 +1,75 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  font-family: 'Hubballi', cursive;
+  background-color: #f9db6d;
+  color: #3A332C;
+}
+
+header div {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  font-size: 24px;
+}
+
+header nav {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+  font-size: 24px;
+}
+
+a {
+  color: #464d77;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #27272c;
+}
+
+a img {
+  position: relative;
+  top: 6px;
+  margin-right:5px;
+}
+
+
+main {
+  background-color: #3A332C;
+  background-image: url('./img/billy-mangino-TwJcMaIkBAU-unsplash.jpg');
+  background-size: cover;
+}
+
+main div {
+  display: flex;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  background-color: #3A332C;
+
+}
+
+main img {
+  width: 500px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  font-family: 'Hubballi', cursive;
+  background-color: #f9db6d;
+  color: #3A332C;
+}
